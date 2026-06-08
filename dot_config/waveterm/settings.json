@@ -1,0 +1,11 @@
+{
+  "autoupdate:enabled": false,
+  "autoupdate:channel": "latest",
+  "telemetry:enabled": false,
+  "tab:confirmclose": true,
+  "term:copyonselect": false,
+  "term:fontfamily": "MonaspiceNe Nerd Font Mono",
+  "term:fontsize": 16,
+  "web:defaultsearch": "https://search.brave.com/search?q={query}",
+  "web:defaulturl": "https://search.brave.com"
+}

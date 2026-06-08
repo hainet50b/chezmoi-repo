@@ -1,0 +1,40 @@
+{
+  "defwidget@files": null,
+  "defwidget@sysinfo": null,
+  "chatgpt": {
+    "icon": "comment-dots",
+    "label": "ChatGPT",
+    "color": "#f0f6fc",
+    "blockdef": {
+      "meta": {
+        "view": "web",
+        "url": "https://chatgpt.com",
+        "pinnedurl": "https://chatgpt.com"
+      }
+    }
+  },
+  "claude": {
+    "icon": "message-bot",
+    "label": "Claude",
+    "color": "#f0f6fc",
+    "blockdef": {
+      "meta": {
+        "view": "web",
+        "url": "https://claude.ai",
+        "pinnedurl": "https://claude.ai"
+      }
+    }
+  },
+  "reader": {
+    "icon": "book",
+    "label": "Reader",
+    "color": "#f0f6fc",
+    "blockdef": {
+      "meta": {
+        "view": "web",
+        "url": "https://read.readwise.io/home",
+        "pinnedurl": "https://read.readwise.io/home"
+      }
+    }
+  }
+}
