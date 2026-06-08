@@ -10,5 +10,14 @@ if (-not [Console]::IsOutputRedirected) {
     Set-PSReadLineOption -PredictionSource History
 }
 
+# PSFzf: fuzzy history (Ctrl+r) and file (Ctrl+t) search via fzf
+if (-not (Get-Module -ListAvailable -Name PSFzf)) {
+    Install-Module -Name PSFzf -Scope CurrentUser -Force
+}
+Import-Module PSFzf
+if (-not [Console]::IsOutputRedirected) {
+    Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
+}
+
 # zoxide: smarter cd (adds `z` and `zi`) — keep at end so it hooks the prompt last
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
