@@ -4,7 +4,7 @@
   "telemetry:enabled": false,
   "tab:confirmclose": true,
   "term:copyonselect": false,
-  "term:fontfamily": "MonaspiceNe Nerd Font Mono",
+  "term:fontfamily": "MonaspiceNe Nerd Font Mono, Noto Sans Mono CJK JP",
   "term:fontsize": 16,
   "web:defaultsearch": "https://search.brave.com/search?q={query}",
   "web:defaulturl": "https://search.brave.com"
