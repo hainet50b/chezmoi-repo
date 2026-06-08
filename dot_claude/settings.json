@@ -6,6 +6,7 @@
   "disableBypassPermissionsMode": "disable",
   "permissions": {
     "allow": [
+      "Read", "Glob", "Grep",
       "Bash(git status:*)", "Bash(git -C * status:*)",
       "Bash(git diff:*)", "Bash(git -C * diff:*)",
       "Bash(git log:*)", "Bash(git -C * log:*)",
