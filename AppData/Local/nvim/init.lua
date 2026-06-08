@@ -19,6 +19,15 @@ vim.opt.tabstop = 4
 vim.opt.list = true
 vim.opt.listchars = "lead:·,trail:·"
 
+-- Config-file types use 2-space indent
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "lua", "json", "jsonc", "yaml", "toml" },
+  callback = function()
+    vim.bo.shiftwidth = 2
+    vim.bo.tabstop = 2
+  end,
+})
+
 -- Search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
