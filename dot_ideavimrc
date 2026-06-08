@@ -1,0 +1,62 @@
+" Search and Highlight
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+nnoremap <Space>nhl :nohlsearch<CR>
+
+" Clipboard
+set clipboard=unnamedplus
+Plug 'machakann/vim-highlightedyank'
+let g:highlightedyank_highlight_duration = "100"
+
+" Text objects
+" Vim AnyObject: https://plugins.jetbrains.com/plugin/28333-vim-anyobject
+set anyobject
+Plug 'vim-scripts/argtextobj.vim'
+
+" Comment
+Plug 'tpope/vim-commentary'
+
+" Mode
+inoremap fd <Esc>
+
+" IdeaVim
+nnoremap <Space><Space>x :action IdeaVim.ReloadVimRc.reload<CR>
+
+" Tab
+" Tab Shifter: https://plugins.jetbrains.com/plugin/7475-tab-shifter
+nnoremap <Space>wl :action TabShiftActions.ShiftRight<CR>
+nnoremap <Space>wh :action TabShiftActions.ShiftLeft<CR>
+nnoremap <Space>wj :action TabShiftActions.ShiftDown<CR>
+nnoremap <Space>wk :action TabShiftActions.ShiftUp<CR>
+nnoremap <Space>wo :action MoveEditorToOppositeTabGroup<CR>
+
+" Buffer (= IDE's tab)
+nnoremap <Space>bd :bd<CR>
+
+" Terminal
+nnoremap <Space>tt :action ActivateTerminalToolWindow<CR>
+nnoremap <Space>tj :action ActivateTerminalToolWindow<CR>
+" Also defined in IDE keymap settings
+" nnoremap <C-@> :action ActivateTerminalToolWindow<CR>
+
+" File search
+nnoremap <Space>fe :edit ~/.ideavimrc<CR>
+nnoremap <Space>fs :action ShowSettings<CR>
+nnoremap <Space>fa :action SearchEverywhere<CR>
+nnoremap <Space>fd :action GotoFile<CR>
+nnoremap <Space>fb :action RecentFiles<CR>
+
+" Text search
+nnoremap <Space>gg :action Find<CR>
+nnoremap <Space>gd :action FindInPath<CR>
+
+" Explorer
+nnoremap <Space>ed :action ActivateProjectToolWindow<CR>
+
+" Code
+nnoremap <Space>cf :action ReformatCode<CR>
+nnoremap <Space>cr :action RenameElement<CR>
+nnoremap <Space>cs :action FileStructurePopup<CR>
+nnoremap <Space>cS :action ActivateStructureToolWindow<CR>
