@@ -49,3 +49,33 @@ function y {
     }
     Remove-Item -Path $tmp
 }
+
+# Cheatsheet: traditional command -> modern replacement (type `cheat` to reshow)
+function Show-Cheatsheet {
+    Write-Host ""
+    Write-Host "  modern CLI" -ForegroundColor Cyan -NoNewline
+    Write-Host "  ·  traditional → replacement" -ForegroundColor DarkGray
+    $rows = @(
+        @('cat',   'bat',      'syntax-highlighted pager'),
+        @('ls',    'eza',      'icons + git status'),
+        @('find',  'fd',       'fast file search'),
+        @('grep',  'rg',       'fast content search'),
+        @('cd',    'z / zi',   'frecency jump (zoxide)'),
+        @('diff',  'delta',    'prettier git diffs'),
+        @('files', 'yazi / y', 'TUI manager (y = cd on exit)')
+    )
+    foreach ($r in $rows) {
+        Write-Host ("    {0,-7}" -f $r[0]) -ForegroundColor DarkGray -NoNewline
+        Write-Host "→ " -ForegroundColor Cyan -NoNewline
+        Write-Host ("{0,-11}" -f $r[1]) -ForegroundColor Green -NoNewline
+        Write-Host $r[2] -ForegroundColor DarkGray
+    }
+    Write-Host "    fuzzy  " -ForegroundColor DarkGray -NoNewline
+    Write-Host "  Ctrl+R " -ForegroundColor Green -NoNewline
+    Write-Host "history  " -ForegroundColor DarkGray -NoNewline
+    Write-Host "Ctrl+T " -ForegroundColor Green -NoNewline
+    Write-Host "files" -ForegroundColor DarkGray
+    Write-Host ""
+}
+Set-Alias cheat Show-Cheatsheet
+if (-not [Console]::IsOutputRedirected) { Show-Cheatsheet }
