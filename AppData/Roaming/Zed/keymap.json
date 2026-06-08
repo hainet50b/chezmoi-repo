@@ -1,0 +1,14 @@
+[
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "f d": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "shift shift": "command_palette::Toggle"
+    }
+  }
+]

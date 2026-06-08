@@ -1,0 +1,20 @@
+{
+  "project_panel": { "dock": "left" },
+  "outline_panel": { "dock": "left" },
+  "collaboration_panel": { "dock": "right" },
+  "agent": { "sidebar_side": "right", "dock": "right", "favorite_models": [], "model_parameters": [] },
+  "git_panel": { "dock": "left" },
+  "terminal": { "dock": "bottom" },
+  "buffer_font_family": "MonaspiceNe Nerd Font Mono",
+  "buffer_font_fallbacks": ["Noto Sans Mono CJK JP"],
+  "ui_font_fallbacks": ["Noto Sans CJK JP"],
+  "telemetry": { "diagnostics": false, "metrics": false },
+  "vim_mode": true,
+  "base_keymap": "JetBrains",
+  "icon_theme": { "mode": "dark", "light": "Zed (Default)", "dark": "Zed (Default)" },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "cli_default_open_behavior": "existing_window",
+  "tabs": { "git_status": true },
+  "theme": { "mode": "dark", "light": "One Light", "dark": "Ayu Mirage" }
+}
