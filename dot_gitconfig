@@ -1,0 +1,15 @@
+[user]
+	name = hainet50b
+	email = 20400616+hainet50b@users.noreply.github.com
+[core]
+	editor = nvim
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	line-numbers = true
+[merge]
+	conflictStyle = zdiff3
+[init]
+	defaultBranch = main
