@@ -5,6 +5,10 @@ try {
 } catch {}
 $OutputEncoding = [System.Text.Encoding]::UTF8
 
+# Editor
+$env:EDITOR = "nvim"
+$env:VISUAL = "nvim"
+
 # mise: activate for interactive PowerShell sessions (per-project tool versions + env vars like JAVA_HOME)
 mise activate pwsh | Out-String | Invoke-Expression
 
@@ -34,3 +38,14 @@ if (Test-Path "$HOME\.homeos\completion.ps1") {
 
 # zoxide: smarter cd (adds `z` and `zi`) — keep at end so it hooks the prompt last
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
+
+# y: run yazi and cd to its last directory on exit
+function y {
+    $tmp = [System.IO.Path]::GetTempFileName()
+    yazi $args --cwd-file="$tmp"
+    $cwd = Get-Content -LiteralPath $tmp -Encoding UTF8
+    if (-not [String]::IsNullOrEmpty($cwd) -and $cwd -ne $PWD.Path) {
+        Set-Location -LiteralPath $cwd
+    }
+    Remove-Item -Path $tmp
+}
