@@ -13,7 +13,9 @@ $env:VISUAL = "nvim"
 mise activate pwsh | Out-String | Invoke-Expression
 
 # starship: cross-shell prompt
-Invoke-Expression (&starship init powershell)
+if (-not [Console]::IsOutputRedirected) {
+    Invoke-Expression (&starship init powershell)
+}
 
 # PSReadLine: history-based predictions + menu-style tab completion, no bell
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
