@@ -9,6 +9,9 @@ $OutputEncoding = [System.Text.Encoding]::UTF8
 $env:EDITOR = "nvim"
 $env:VISUAL = "nvim"
 
+# codex: winget ships the binary under its target-triple name
+Set-Alias codex codex-x86_64-pc-windows-msvc
+
 # mise: activate for interactive PowerShell sessions (per-project tool versions + env vars like JAVA_HOME)
 mise activate pwsh | Out-String | Invoke-Expression
 
