@@ -9,6 +9,9 @@ $OutputEncoding = [System.Text.Encoding]::UTF8
 $env:EDITOR = "nvim"
 $env:VISUAL = "nvim"
 
+# User Provided Binaries
+$env:PATH += ";$HOME\.local\bin"
+
 # codex: winget ships the binary under its target-triple name
 Set-Alias codex codex-x86_64-pc-windows-msvc
 
