@@ -92,32 +92,36 @@
       "Read(**/.aws/**)",
       "Read(**/credentials*)"
     ],
-    "ask": [
-      "Edit",
-      "Write",
-      "NotebookEdit",
-      "Bash(git commit:*)",
-      "Bash(git push:*)",
-      "Bash(git reset:*)",
-      "Bash(git rebase:*)",
-      "Bash(git clean:*)",
-      "Bash(cargo run:*)",
-      "Bash(cargo install:*)",
-      "Bash(npm run:*)",
-      "Bash(npm install:*)",
-      "Bash(npm ci:*)",
-      "Bash(npm start:*)",
-      "Bash(npx:*)",
-      "Bash(docker run:*)",
-      "Bash(docker compose:*)",
-      "Bash(rm:*)",
-      "Bash(rmdir:*)",
-      "Bash(curl:*)",
-      "Bash(wget:*)"
-    ]
+    "_comment": {
+      "ask": [
+        "Edit",
+        "Write",
+        "NotebookEdit",
+        "Bash(git commit:*)",
+        "Bash(git push:*)",
+        "Bash(git reset:*)",
+        "Bash(git rebase:*)",
+        "Bash(git clean:*)",
+        "Bash(cargo run:*)",
+        "Bash(cargo install:*)",
+        "Bash(npm run:*)",
+        "Bash(npm install:*)",
+        "Bash(npm ci:*)",
+        "Bash(npm start:*)",
+        "Bash(npx:*)",
+        "Bash(docker run:*)",
+        "Bash(docker compose:*)",
+        "Bash(rm:*)",
+        "Bash(rmdir:*)",
+        "Bash(curl:*)",
+        "Bash(wget:*)"
+      ]
+    }
   },
   "effortLevel": "high",
   "autoUpdatesChannel": "latest",
   "tui": "fullscreen",
-  "theme": "dark"
+  "skipWorkflowUsageWarning": true,
+  "theme": "dark",
+  "skipDangerousModePermissionPrompt": true
 }
