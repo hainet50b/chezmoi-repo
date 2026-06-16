@@ -39,6 +39,11 @@ if (-not [Console]::IsOutputRedirected) {
     Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 }
 
+# PSScriptAnalyzer: PowerShell linter (Invoke-ScriptAnalyzer) + formatter (Invoke-Formatter)
+if (-not (Get-Module -ListAvailable -Name PSScriptAnalyzer)) {
+    Install-Module -Name PSScriptAnalyzer -Scope CurrentUser -Force
+}
+
 # homeos: shell completion (static script written by the installer)
 if (Test-Path "$HOME\.homeos\completion.ps1") {
     . "$HOME\.homeos\completion.ps1"
