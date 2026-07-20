@@ -12,9 +12,6 @@ $env:VISUAL = "nvim"
 # User Provided Binaries
 $env:PATH += ";$HOME\.local\bin"
 
-# codex: winget ships the binary under its target-triple name
-Set-Alias codex codex-x86_64-pc-windows-msvc
-
 # mise: activate for interactive PowerShell sessions (per-project tool versions + env vars like JAVA_HOME)
 mise activate pwsh | Out-String | Invoke-Expression
 
